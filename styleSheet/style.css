@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mainContainer{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 15px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+}
+header span{
+    color: royalblue;
+}
+header button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    color: black;
+}
+
+/* hero section  */
+.hiro_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+
+}
+.hiro_container h1{
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+.hiro_container span{
+    color: aqua;
+}
+
+/* lesson_btn_container  */
+.lesson_btn_container{
+    padding: 50px 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.level_btn{
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+
+}
+.card_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.cards{
+    padding: 30px 15px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    text-align: center;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.icons i{
+    padding: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+    
