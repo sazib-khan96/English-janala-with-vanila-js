@@ -14,11 +14,20 @@ const showLevel = (levels) => {
     // console.log(level)
     const levelBtn = document.createElement("div");
     levelBtn.innerHTML = `
-      <button class='level_btn' onClick='levelWords(${level.level_no})'> Lesson-${level.level_no}</button>
+      <button class='level_btn btns' id='level_btn-${level.level_no}' onClick='levelWords(${level.level_no})'> Lesson-${level.level_no}</button>
      `;
     levelShowContainer.appendChild(levelBtn);
   });
 };
+
+const colordeactive =()=>{
+   const allBtns =  document.querySelectorAll(".btns")
+   allBtns.forEach(btn => {
+    btn.classList.remove("active")
+   })
+}
+
+
 
 // showLevelWords function
 const levelWords = (id) => {
@@ -26,8 +35,12 @@ const levelWords = (id) => {
   fetch(url)
     .then((res) => res.json())
     .then((words) => {
+      colordeactive()
       const allWords = words.data;
       showLevelWords(allWords);
+
+  const clickBtn = document.getElementById(`level_btn-${id}`)
+   clickBtn.classList.add('active')
     });
 };
 
