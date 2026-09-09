@@ -53,9 +53,9 @@ const showLevelWords = (words) => {
     
     card.innerHTML = `
      <div class="cards">
-                    <h3>${word.word}</h3>
+                    <h3>${word.word ? word.word : " No word found"}</h3>
                     <p> Meaning / Pronunciation </p>
-                    <h4>${word.meaning}/${word.pronunciation}</h4>
+                    <h4>${word.meaning ? word.meaning : " No word found"}/${word.pronunciation ? word.pronunciation : "No Pronounciation found"}</h4>
                     <div class="icons">
                         <i class="fa-solid fa-info"></i>
                         <i class="fa-solid fa-volume"></i>
