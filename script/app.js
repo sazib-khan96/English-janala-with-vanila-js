@@ -34,22 +34,28 @@ const levelWords = (id) => {
 const showLevelWords = (words) => {
   const cardsContainer = document.getElementById("cardContainer");
   cardsContainer.innerHTML = "";
+
+  if (words.length == 0) {
+    cardsContainer.innerHTML = `
+        <div class="error_massage">
+                <img src="./images/download (1).png" alt="">
+                <p>এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+                <h2>নেক্সট Lesson এ যান</h2>
+            </div>
+            
+     
+     `;
+    return;
+  }
+
   words.forEach((word) => {
     const card = document.createElement("div");
-
-    if (word.length === 0) {
-      cardsContainer.innerHTML = `
-               <div>
-                    <h1>No words here</h1>
-              </div>
-        `;
-        return
-    }
+    
     card.innerHTML = `
      <div class="cards">
                     <h3>${word.word}</h3>
-                    <p>${word.meaning} </p>
-                    <h4>${word.pronunciation}</h4>
+                    <p> Meaning / Pronunciation </p>
+                    <h4>${word.meaning}/${word.pronunciation}</h4>
                     <div class="icons">
                         <i class="fa-solid fa-info"></i>
                         <i class="fa-solid fa-volume"></i>
