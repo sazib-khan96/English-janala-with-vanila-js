@@ -70,7 +70,7 @@ const showLevelWords = (words) => {
                     <p> Meaning / Pronunciation </p>
                     <h4>${word.meaning ? word.meaning : " No word found"}/${word.pronunciation ? word.pronunciation : "No Pronounciation found"}</h4>
                     <div class="icons">
-                        <i class="fa-solid fa-info"></i>
+                        <i class="fa-solid fa-info info_btn"></i>
                         <i class="fa-solid fa-volume"></i>
                     </div>
                 </div>
@@ -79,3 +79,4 @@ const showLevelWords = (words) => {
     cardsContainer.appendChild(card);
   });
 };
+
