@@ -34,9 +34,7 @@ header button {
   align-items: center;
   padding: 10px;
 }
-.hiro_container img{
-    width: 400px;
-}
+
 .hiro_container h1 {
   font-size: 42px;
   margin-bottom: 10px;
@@ -49,6 +47,9 @@ header button {
 .lesson_heading{
     text-align: center;
 }
+.lesson_heading span{
+   color: aqua;
+}
 .lesson_btn_container {
   padding: 50px 10px;
   display: flex;
@@ -60,12 +61,7 @@ header button {
   border: none;
   font-size: 16px;
 }
-.level_btn:hover {
-  padding: 10px 20px;
-  border: none;
-  font-size: 16px;
-  cursor:pointer ;
-}
+
 
 .active{
     background-color: black;
