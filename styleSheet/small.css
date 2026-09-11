@@ -1,32 +1,17 @@
-@media screen and (max-width: 776px) {
-
-.hiro_container {
-   padding: 50px 15px;
-  grid-template-columns: repeat(1, 1fr);
-  text-align: center;
-  
-}
-.hiro_container img{
+@media screen and (max-width: 768px) {
+  .hiro_container {
+    padding: 50px 15px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+  .hiro_container img {
     width: 400px;
-}
-.lesson_btn_container {
- flex-wrap: wrap;
- 
-}
-.card_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin: 0 auto;
-  background-color: rgb(240, 240, 240);
-  padding: 15px;
-}
-
-
-
-
-
-
-
-
+  }
+  .lesson_btn_container {
+    flex-wrap: wrap;
+  }
+  .card_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
 }

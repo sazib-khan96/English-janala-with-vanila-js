@@ -1,3 +1,26 @@
+let allData = [];
+
+// search function
+const searchBtn = document.getElementById("search_btn");
+const searchBox = document.getElementById("search");
+
+searchBtn.addEventListener("click", () => {
+  fetch("https://openapi.programming-hero.com/api/words/all")
+    .then((res) => res.json())
+    .then((data) => {
+      allData = data.data;
+
+      let searchValue = searchBox.value.toLowerCase();
+
+      let filterData = allData.filter((word) =>
+        word.word.toLowerCase().includes(searchValue)
+      );
+
+      showLevelWords(filterData);
+    });
+});
+
+
 // lesson btn featch
 const url = "https://openapi.programming-hero.com/api/levels/all";
 fetch(url)
@@ -5,6 +28,7 @@ fetch(url)
   .then((level) => {
     const levels = level.data;
     showLevel(levels);
+    allData = levels
   });
 
 // lesson level showing function

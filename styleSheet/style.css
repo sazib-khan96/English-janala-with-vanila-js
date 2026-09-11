@@ -51,7 +51,7 @@ header button {
    color: aqua;
 }
 .lesson_btn_container {
-  padding: 50px 10px;
+  padding: 10px 10px;
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -118,3 +118,27 @@ header button {
   border-radius: 50px;
 }
 /* Lesson btn active color and hover color  */
+.search_container{
+  padding: 15px;
+  width: 100%;
+ 
+  
+}
+.search_container input{
+  padding: 10px;
+  border: none;
+  background-color: rgb(235, 235, 235);
+  outline: none;
+  font-size: 16px;
+}
+.search_container button{
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(235, 235, 235);
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: black;
+  color: aliceblue;
+}
