@@ -162,7 +162,11 @@ header button {
   gap: 20px;
   padding: 10px;
   justify-content: space-between;
-  background-color: azure;
+ border-bottom: 1px solid rgb(200, 200, 200);
+}
+.dropDown.active {
+  transform: rotate(-180deg);
+  color: red;
 }
 .answer{
   font-size: 16px;
@@ -170,10 +174,12 @@ header button {
   line-height: 28px;
   padding: 10px;
   display: none;
-  transition: 0.4s;
+  transform: translateY(10px);
+  transition: 0.6s ease;
 }
 .answer.show{
   display: block;
+  transform: translateY(0px);
 }
 .dropDown {
   

@@ -115,6 +115,18 @@ faqBtn.forEach(btn => {
         shows.forEach(item => {
           item.classList.remove('show')
         })
-        answer.classList.toggle("show")
+        answer.classList.add("show")
     })
+})
+
+const dropDownBtn = document.querySelectorAll('.dropDown')
+dropDownBtn.forEach(btn => {
+  btn.addEventListener('click',()=>{
+
+    const activeBtn = document.querySelectorAll('.active')
+    activeBtn.forEach(action => {
+      action.classList.remove('active')
+    })
+    btn.classList.add('active')
+  })
 })
