@@ -110,7 +110,11 @@ const faqBtn = document.querySelectorAll('.question')
 faqBtn.forEach(btn => {
     btn.addEventListener('click',()=>{
         const answer = btn.nextElementSibling
-
+        
+        const shows = document.querySelectorAll('.answer.show')
+        shows.forEach(item => {
+          item.classList.remove('show')
+        })
         answer.classList.toggle("show")
     })
 })
