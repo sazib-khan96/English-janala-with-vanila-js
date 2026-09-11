@@ -104,3 +104,13 @@ const showLevelWords = (words) => {
   });
 };
 
+const faqBtn = document.querySelectorAll('.question')
+
+
+faqBtn.forEach(btn => {
+    btn.addEventListener('click',()=>{
+        const answer = btn.nextElementSibling
+
+        answer.classList.toggle("show")
+    })
+})
